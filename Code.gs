@@ -10,18 +10,19 @@ const doPost = (e) => {
 
         if (!sheet) {
             sheet = doc.insertSheet(SHEET_NAME);
-            sheet.appendRow(['Timestamp', 'Name', 'Email', 'Repository URL', 'Project Description']);
+            sheet.appendRow(['Timestamp', 'Name', 'Email', 'Country', 'Repository URL', 'Project Description']);
         }
 
         const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
         const nextRow = sheet.getLastRow() + 1;
 
-        const { name, email, repoUrl, description, timestamp } = e.parameter;
+        const { name, email, repoUrl, description, timestamp, country } = e.parameter;
 
         const row = [
             timestamp || new Date().toISOString(),
             name,
             email,
+            country,
             repoUrl,
             description
         ];
@@ -46,6 +47,6 @@ const doPost = (e) => {
 
 const doGet = () => {
     return ContentService
-        .createTextOutput('VibeFinish Google Apps Script is running. Use POST to submit form data.')
+        .createTextOutput('FVTP Google Apps Script is running. Use POST to submit form data.')
         .setMimeType(ContentService.MimeType.TEXT);
 };
