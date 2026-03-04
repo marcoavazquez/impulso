@@ -321,10 +321,10 @@ section.hero {
     box-shadow: 0 12px 35px rgba(124, 58, 237, 0.5);
 }
 
-/* ── CODE WINDOW ── */
 .code-window {
     background: var(--code-bg);
     border-radius: 14px;
+    text-align: left;
     overflow: hidden;
     box-shadow: 0 25px 60px var(--shadow), 0 0 0 1px rgba(124, 58, 237, 0.2);
     position: relative;
