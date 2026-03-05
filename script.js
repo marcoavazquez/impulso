@@ -30,7 +30,7 @@ form.addEventListener('submit', async (e) => {
     formMessage.className = 'form-message';
     formMessage.textContent = '';
 
-    const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby1XbLG1Ay44SAAt-UT4wkiQ9TGp7m0pUGTAjae3PrbEo7TBDqeg2o0Wpkyw3aJj-zA/exec';
 
     try {
         const response = await fetch(SCRIPT_URL, {
@@ -42,12 +42,12 @@ form.addEventListener('submit', async (e) => {
             body: JSON.stringify(formData)
         });
 
-        formMessage.textContent = 'Thank you! Your project has been submitted successfully. We\'ll be in touch soon!';
+        formMessage.textContent = '¡Gracias! Tu proyecto ha sido enviado exitosamente. Nos pondremos en contacto contigo pronto!';
         formMessage.className = 'form-message success';
         form.reset();
     } catch (error) {
         console.error('Error:', error);
-        formMessage.textContent = 'Sorry, something went wrong. Please try again or contact us directly.';
+        formMessage.textContent = 'Lo sentimos, algo salió mal. Por favor, intenta de nuevo o contáctanos directamente.';
         formMessage.className = 'form-message error';
     } finally {
         submitBtn.disabled = false;

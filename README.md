@@ -1,4 +1,4 @@
-# VibeFinish Landing Page
+# Impulso Landing Page (FVTP)
 
 A frontend-only landing page for a company that completes and deploys vibe-coded applications. Hosted on GitHub Pages.
 
