@@ -28,7 +28,7 @@ form.addEventListener('submit', (e) => {
             formMessage.className = 'form-message';
             formMessage.textContent = '';
 
-            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzDmyKWAXgqoBnuULACzCO5RzOwWPgRxBbNyjFOnq6vCUfksM1AHZZlM2ig_9Fq_u8Q/exec';
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzYuZ-OWLwFq_gteB7WiXsl_taabS0lOXo4HuOHzBMpFPUg6jHGizvuLlzkkZzZc3S-/exec';
 
             try {
                 const response = await fetch(SCRIPT_URL, {
